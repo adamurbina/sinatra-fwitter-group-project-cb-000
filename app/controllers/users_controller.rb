@@ -6,12 +6,11 @@ class UsersController < ApplicationController
 
   get '/signup' do
 
-    Helpers.test
-    # if Helpers.is_logged_in?(session)
-    #   erb :'/twitter/tweets'
-    # else
-    #   erb :'/users/create_user'
-    # end
+    if Helpers.is_logged_in?(session)
+      erb :'/twitter/tweets'
+    else
+      erb :'/users/create_user'
+    end
 
   end
 
