@@ -27,6 +27,11 @@ class UsersController < ApplicationController
     end
   end
 
+  get '/user/:user_slug' do
+    @user = User.find_by_slug(params[:user_slug])
+    erb: :'users/show'
+  end
+
   post '/signup' do
     params.each do |key, value|
       redirect '/signup' if value.empty?
