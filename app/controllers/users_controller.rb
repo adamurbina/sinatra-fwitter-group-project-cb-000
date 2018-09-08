@@ -9,6 +9,7 @@ class UsersController < ApplicationController
     if Helpers.is_logged_in?(session)
       redirect :'/twitter/tweets'
     end
+    
     erb :'/users/create_user'
   end
 
