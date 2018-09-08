@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
     if Helpers.is_logged_in?(session)
       puts "SUCCESS"
-      erb :'/twitter/tweets'
+      redirect :'/twitter/tweets'
     else
       puts "FAILURE"
       erb :'/users/create_user'
