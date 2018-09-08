@@ -11,7 +11,7 @@ class UsersController < ApplicationController
       redirect :'/twitter/tweets'
     else
       puts "FAILURE"
-      erb :'/users/create_user'
+      redirect :'/users/create_user'
     end
 
   end
