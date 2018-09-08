@@ -1,15 +1,15 @@
 class UsersController < ApplicationController
 
   get '/login' do
-    erb :'/users/login'
+    erb :'users/login'
   end
 
   get '/signup' do
 
     if Helpers.is_logged_in?(session)
-      erb :'/twitter/tweets'
+      erb :'twitter/tweets'
     else
-      erb :'/users/create_user'
+      erb :'users/create_user'
     end
 
   end
@@ -23,7 +23,7 @@ class UsersController < ApplicationController
 
     session[:user_id] = user.id
 
-    erb :'/twitter/tweets'
+    erb :'twitter/tweets'
 
   end
 
@@ -31,7 +31,7 @@ class UsersController < ApplicationController
     @user = User.find_by(username: params[:username], password: params[:password] )
 
     if @user
-      redirect :'/twitter/tweets'
+      redirect :'twitter/tweets'
     end
   end
 
