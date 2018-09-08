@@ -1,1 +1,6 @@
 <h3>Your Tweet</h3><br>
+
+<%= @tweet.content %><br>
+
+<a href='/tweets/<%= @tweet.id %>/edit'>Edit Tweet</a><br>
+<a href='/tweets/<%= @tweet.id %>/delete'>Delete Tweet</a>
