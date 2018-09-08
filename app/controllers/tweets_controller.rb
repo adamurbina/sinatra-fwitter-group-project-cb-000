@@ -57,4 +57,8 @@ class TweetsController < ApplicationController
     end
   end
 
+  post '/tweets/:id/delete' do
+    if
+  end
+
 end
