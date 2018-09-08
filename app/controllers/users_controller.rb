@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     #   erb :'/twitter/tweets'
     # else
       erb :'/users/create_user'
-    end
+    # end
 
   end
 
