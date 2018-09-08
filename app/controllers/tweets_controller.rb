@@ -48,7 +48,7 @@ class TweetsController < ApplicationController
 
   post '/tweets/:id/edit' do
     if params[:content].empty?
-      redirect '/tweets'
+      redirect "/tweets/#{params[:id]}/edit"
     else
       tweet = Tweet.find_by(id: params[:id])
       tweet.content = params[:content]
