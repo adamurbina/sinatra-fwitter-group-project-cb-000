@@ -23,7 +23,7 @@ class UsersController < ApplicationController
 
     session[:user_id] = user.id
 
-    redirect :'/twitter/tweets'
+    erb :'/twitter/tweets'
 
   end
 
