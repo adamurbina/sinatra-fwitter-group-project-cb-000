@@ -19,7 +19,7 @@ class UsersController < ApplicationController
       redirect '/signup' if value.empty?
     end
 
-    user = User.create(username: params[:username], email: params[:email], password: params[:password])
+    user = User.create(username: params[:username], email: params[:email], password_digest: params[:password])
 
     Helper.test
     # session[:user_id] = user.id
