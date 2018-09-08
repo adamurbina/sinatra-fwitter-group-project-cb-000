@@ -7,10 +7,8 @@ class UsersController < ApplicationController
   get '/signup' do
 
     if Helpers.is_logged_in?(session)
-      puts "SUCCESS"
       erb :'/twitter/tweets'
     else
-      puts "FAILURE"
       erb :'/users/create_user'
     end
 
