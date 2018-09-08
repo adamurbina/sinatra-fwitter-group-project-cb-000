@@ -19,7 +19,7 @@ class UsersController < ApplicationController
       redirect '/signup' if value.empty?
     end
 
-    user = User.create(username: params[:username], email: params[:email], password_digest: params[:password])
+    user = User.create(username: params[:username], email: params[:email], password: params[:password])
 
     # session[:user_id] = user.id
 
@@ -28,7 +28,7 @@ class UsersController < ApplicationController
   end
 
   post '/login' do
-    @user = User.find_by(username: params[:username], password: params[:password], )
+    @user = User.find_by(username: params[:username], password: params[:password] )
 
     if @user
       redirect :'/twitter/tweets'
