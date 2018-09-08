@@ -8,7 +8,7 @@ class Helpers
     end
 
     def self.test
-      puts"HELLO WORLDZ"
+      puts "HELLO WORLDZ"
     end
 
 end
