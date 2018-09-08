@@ -61,7 +61,7 @@ class TweetsController < ApplicationController
     tweet = Tweet.find_by(params[:id])
     user = Helpers.current_user(session)
     if tweet.user_id == user.id
-      tweet.destory
+      tweet.delete
     else
       redirect '/tweets'
     end
