@@ -7,7 +7,4 @@ class Helpers
         !!User.find_by_id(session[:user_id])
     end
 
-    def self.test
-      puts "Hi!"
-    end
 end
