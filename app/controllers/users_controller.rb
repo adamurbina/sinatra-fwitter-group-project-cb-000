@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 
   get '/signup' do
 
+    Helpers.test
     if Helpers.is_logged_in?(session)
       erb :'/twitter/tweets'
     else
