@@ -15,7 +15,7 @@ class UsersController < ApplicationController
 
     user = User.create(username: params[:username], email: params[:email], password: params[:password])
 
-    redi :'/twitter/tweets'
+    redirect :'/twitter/tweets'
 
   end
 
