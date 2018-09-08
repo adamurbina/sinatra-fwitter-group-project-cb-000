@@ -11,7 +11,11 @@ class TweetsController < ApplicationController
   end
 
   get "/tweets/new" do
-    erb :'/twitter/create_tweet'
+    if Helpers.is_logged_in?(session)
+      @user = Helpers.current_user(session)
+      erb :'/twitter/create_tweet'
+    end
+
   end
 
 end
