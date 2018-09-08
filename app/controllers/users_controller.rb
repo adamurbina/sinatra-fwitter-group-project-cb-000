@@ -1,7 +1,11 @@
 class UsersController < ApplicationController
 
   get '/login' do
-    erb :'users/login'
+    if Helpers.is_logged_in?(session)
+      redirect '/tweets'
+    else
+      erb :'users/login'
+    end
   end
 
   get '/signup' do
