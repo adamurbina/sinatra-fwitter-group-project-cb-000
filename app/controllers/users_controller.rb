@@ -21,7 +21,6 @@ class UsersController < ApplicationController
 
     user = User.create(username: params[:username], email: params[:email], password_digest: params[:password])
 
-    Helper.test
     # session[:user_id] = user.id
 
     erb :'/twitter/tweets'
