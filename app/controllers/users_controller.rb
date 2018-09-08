@@ -18,6 +18,15 @@ class UsersController < ApplicationController
 
   end
 
+  get '/logout' do
+    if Helpers.is_logged_in?(session)
+      session.clear
+      redirect '/login'
+    else
+
+    end
+  end
+
   post '/signup' do
     params.each do |key, value|
       redirect '/signup' if value.empty?
