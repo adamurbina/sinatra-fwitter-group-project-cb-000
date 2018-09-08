@@ -23,7 +23,7 @@ class UsersController < ApplicationController
 
     session[:user_id] = user.id
 
-    erb :'twitter/tweets'
+    redirect :'twitter/tweets'
 
   end
 
@@ -31,7 +31,7 @@ class UsersController < ApplicationController
     @user = User.find_by(username: params[:username], password: params[:password] )
 
     if @user
-      redirect :'twitter/tweets'
+      erb :'twitter/tweets'
     end
   end
 
