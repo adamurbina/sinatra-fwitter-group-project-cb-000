@@ -59,7 +59,8 @@ class TweetsController < ApplicationController
 
   post '/tweets/:id/delete' do
     tweet = Tweet.find_by(params[:id])
-    if tweet.user_id == Helpers.current_user(session).id
+    user = Helpers.current_user(session)
+    if tweet.user_id == user.id
       
     else
       redirect '/tweets'
