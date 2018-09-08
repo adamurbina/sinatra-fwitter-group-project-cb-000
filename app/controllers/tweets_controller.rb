@@ -18,14 +18,16 @@ class TweetsController < ApplicationController
     end
   end
 
+  get "/tweets/:id" do
+    erb :'/twitter/show_tweet'
+  end
+
   post "/tweets/new" do
-    # binding.pry
     if params[:content].empty?
       redirect '/tweets/new'
     else
       @user = Helpers.current_user(session)
       new_tweet = Tweet.create(content: params[:content], user_id: @user.id)
-      # binding.pry
       redirect '/tweets'
     end
   end
