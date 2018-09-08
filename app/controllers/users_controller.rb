@@ -31,7 +31,7 @@ class UsersController < ApplicationController
     @user = User.find_by(username: params[:username], password: params[:password] )
 
     if @user
-      erb :'twitter/tweets'
+      redirect '/tweets'
     end
   end
 
