@@ -10,7 +10,7 @@ class UsersController < ApplicationController
       puts "SUCCESS"
       erb :'/twitter/tweets'
     else
-      puts "REACHED HERE!!"
+      puts "FAILURE"
       erb :'/users/create_user'
     end
 
