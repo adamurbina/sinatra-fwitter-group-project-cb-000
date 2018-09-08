@@ -11,7 +11,7 @@ class TweetsController < ApplicationController
   end
 
   get "/tweets/new" do
-    
+    erb :'/twitter/create_tweet'
   end
 
 end
