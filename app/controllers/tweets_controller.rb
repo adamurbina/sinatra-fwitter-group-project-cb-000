@@ -22,6 +22,10 @@ class TweetsController < ApplicationController
   post "/tweets/new" do
     if params[:conent].empty?
       redirect '/tweets/new'
+    else
+      @user = Helpers.current_user(session)
+      
+    end
   end
 
 end
