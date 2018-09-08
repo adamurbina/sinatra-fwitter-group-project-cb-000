@@ -20,7 +20,7 @@ class TweetsController < ApplicationController
   end
 
   post "/tweets/new" do
-    if params[:conent].empty?
+    if params[:content].empty?
       redirect '/tweets/new'
     else
       @user = Helpers.current_user(session)
