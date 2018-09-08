@@ -19,13 +19,13 @@ class TweetsController < ApplicationController
   end
 
   post "/tweets/new" do
-    binding.pry
+    # binding.pry
     if params[:content].empty?
       redirect '/tweets/new'
     else
       @user = Helpers.current_user(session)
       new_tweet = Tweet.create(content: params[:content], user_id: @user.id)
-      binding.pry
+      # binding.pry
       redirect '/tweets'
     end
   end
