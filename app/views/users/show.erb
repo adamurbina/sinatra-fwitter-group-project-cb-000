@@ -1,6 +1,6 @@
 <h2><%= @user.username %>'s Tweets: </h2>
 <br><br>
 
-<% @tweets.tweets.each do |tweet| %>
+<% @tweets.each do |tweet| %>
   <%= tweet.content %><br>
 <% end %>
