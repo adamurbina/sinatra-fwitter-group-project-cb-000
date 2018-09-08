@@ -6,11 +6,11 @@ class UsersController < ApplicationController
 
   get '/signup' do
 
-    # if Helpers.is_logged_in?(session)
-    #   erb :'/twitter/tweets'
-    # else
+    if Helpers.is_logged_in?(session)
+      erb :'/twitter/tweets'
+    else
       erb :'/users/create_user'
-    # end
+    end
 
   end
 
@@ -21,7 +21,8 @@ class UsersController < ApplicationController
 
     user = User.create(username: params[:username], email: params[:email], password: params[:password])
 
-    session[:user_id] = user.id
+    Helper.test
+    # session[:user_id] = user.id
 
     erb :'/twitter/tweets'
 
