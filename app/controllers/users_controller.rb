@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     user = User.create(username: params[:username], email: params[:email], password: params[:password])
     binding.pry
 
-    # session[:user_id] = user.id
+    session[:user_id] = user.id
 
     erb :'/twitter/tweets'
 
