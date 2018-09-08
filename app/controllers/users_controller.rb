@@ -35,4 +35,8 @@ class UsersController < ApplicationController
     end
   end
 
+  get '/' do
+    erb :'/layout'
+  end
+
 end
