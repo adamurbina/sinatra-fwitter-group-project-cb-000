@@ -27,6 +27,14 @@ class TweetsController < ApplicationController
     end
   end
 
+  get "/tweets/:id/edit" do
+    if Helpers.is_logged_in?(session)
+      
+    else
+      redirect '/login'
+    end
+  end
+
   post "/tweets/new" do
     if params[:content].empty?
       redirect '/tweets/new'
