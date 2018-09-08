@@ -20,10 +20,9 @@ class UsersController < ApplicationController
     end
 
     user = User.create(username: params[:username], email: params[:email], password: params[:password])
-    binding.pry
 
     session[:user_id] = user.id
-
+    binding.pry
     erb :'/twitter/tweets'
 
   end
