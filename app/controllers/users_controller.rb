@@ -36,6 +36,7 @@ class UsersController < ApplicationController
   end
 
   get '/' do
+    Helpers.test
     erb :'/layout'
   end
 
