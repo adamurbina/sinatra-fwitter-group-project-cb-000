@@ -12,7 +12,6 @@ class TweetsController < ApplicationController
 
   get "/tweets/new" do
     if Helpers.is_logged_in?(session)
-      @user = Helpers.current_user(session)
       erb :'/twitter/create_tweet'
     else
       redirect '/login'
