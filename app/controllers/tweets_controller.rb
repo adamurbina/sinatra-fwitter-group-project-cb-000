@@ -53,6 +53,7 @@ class TweetsController < ApplicationController
       tweet = Tweet.find_by(id: params[:id])
       tweet.content = params[:content]
       tweet.save
+      redirect "/tweets/#{tweet.id}"
     end
   end
 
