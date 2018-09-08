@@ -36,7 +36,6 @@ class UsersController < ApplicationController
   end
 
   get '/' do
-    puts "REACHED"
     erb :'/layout'
   end
 
