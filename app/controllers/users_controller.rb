@@ -53,7 +53,7 @@ class UsersController < ApplicationController
   end
 
   get '/' do
-    erb :'users/layout'
+    erb :index
   end
 
 end
